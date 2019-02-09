@@ -1,0 +1,45 @@
+<head>
+    <title>Metromap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="img\favicon.png" />
+
+    <script src="libs/cytoscape.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="libs/popper.js"></script>
+    <script src="cytoscape-popper.js"></script>
+
+    <script src="libs/tippy.all.js"></script>
+
+    <link rel="stylesheet" href="libs/tippy.css" />
+
+
+    <script type='text/javascript' src="libs/filesaver.js"></script>
+    <script type='text/javascript' src="libs/xlsx.full.min.js"></script>
+
+
+    <link rel="stylesheet" href="app.css" />
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id='background'>
+        <img src='background.jpg' id='img'>
+    </div>
+    <div id="cy"></div>
+    <div id="title">
+        <span class='name'>INTERACTIVE METRO MAP</span>
+
+    </div>
+    <div id="editmenu">
+        <label for="files" title='Load data you saved before' class="btn">Import</label>
+        <input ref='loadfile' id="files" style="visibility:hidden;width:0px" type="file" onChange="processFile(this)">
+        <button onClick="exportData()" title="Export the data to excel">Export</button>
+        <button onClick="saveData()" title="Save the data">Save data</button>
+    </div>
+    <div id="legend">
+        <strong>Legend</strong>
+    </div>
+</body>
